@@ -282,8 +282,7 @@
             this.btnExport.TabIndex = 49;
             this.btnExport.Text = "Export";
             this.btnExport.UseVisualStyleBackColor = false;
-            this.btnExport.MouseLeave += new System.EventHandler(this.btnExport_MouseLeave);
-            this.btnExport.MouseHover += new System.EventHandler(this.btnExport_MouseHover);
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // panelExport
             // 

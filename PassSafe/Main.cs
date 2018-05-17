@@ -127,6 +127,7 @@ namespace PassSafe
             }
 
             this.SortList();
+            dgvPasswords.ClearSelection();
         }
 
         public void DeletePassword(int index)
@@ -159,6 +160,9 @@ namespace PassSafe
 
         private void dgvSifre_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (dgvPasswords.CurrentRow == null)
+                return;
+
             int selectedindex = dgvPasswords.SelectedRows[0].Index;
             Password passwordSite = _listOfPasswords[selectedindex];
             try
@@ -214,17 +218,20 @@ namespace PassSafe
                 //Remove from grid than add again
                 ListOfPasswords.RemoveRange(0, ListOfPasswords.Count);
                 this.LoadPasswords();
-            }
+                dgvPasswords.ClearSelection();
+                dgvPasswords.Rows[0].Selected = true;
+            }  
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            int selectedindex = dgvPasswords.SelectedRows[0].Index;
+            
             if (_listOfPasswords.Count == 0)
                 return;
+            int selectedindex = dgvPasswords.SelectedRows[0].Index;
             if (selectedindex < 0)
             {
-                MessageBox.Show("You have to select password to delete!", "Delete Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("You have to select password to edit!", "Edit Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -244,9 +251,10 @@ namespace PassSafe
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int selectedindex = dgvPasswords.SelectedRows[0].Index;
+            
             if (_listOfPasswords.Count == 0)
                 return;
+            int selectedindex = dgvPasswords.SelectedRows[0].Index;
             if (selectedindex < 0)
             {
                 MessageBox.Show("You have to select password to delete!", "Delete Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -283,12 +291,7 @@ namespace PassSafe
             }
         }
 
-        private void btnExport_MouseHover(object sender, EventArgs e)
-        {
-            timerPanel.Start();
-        }
-
-        private void btnExport_MouseLeave(object sender, EventArgs e)
+        private void btnExport_Click(object sender, EventArgs e)
         {
             timerPanel.Start();
         }
@@ -501,7 +504,5 @@ namespace PassSafe
 
         //
         #endregion
-
-        
     }
 }

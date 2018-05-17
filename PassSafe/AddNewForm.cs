@@ -126,11 +126,11 @@ namespace PassSafe
         {
             if (!_edit)
             {
-                MessageBox.Show("Add all informations about your password!", "Add new password", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Add all information about your password!", "Add new password", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Change informations about your password!", "Edit password", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Change information about your password!", "Edit password", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
@@ -139,14 +139,14 @@ namespace PassSafe
         {
             if (!_edit)
             {
-                if (MessageBox.Show("Are you sure you don't want to add new password?", "No new password?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Are you sure you don't want to add a new password?", "No new password?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     this.Close();
                 }
             }
             else
             {
-                if (MessageBox.Show("Are you sure you don't want to edit password?", "No edit password?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Are you sure you don't want to edit the chosen password?", "No edit password?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     this.Close();
                 }
