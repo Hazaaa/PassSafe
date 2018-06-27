@@ -23,7 +23,7 @@ PassSafe is created with C# and WinForms.
 ### Login screen...
 >Every other time you open app you will need to enter your universal password that you entered on first time you opened the app.
 
-![passsafe_2018-04-23_22-49-18](https://user-images.githubusercontent.com/36667491/41979331-2087eb52-7a24-11e8-81f0-72ae749ad54b.png)
+![passsafe_2018-04-23_22-49-18](https://user-images.githubusercontent.com/36667491/41980931-06c0c5c8-7a28-11e8-9d71-685c24c0179c.png)
 
 
 ### Main screen...
