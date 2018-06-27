@@ -1,6 +1,6 @@
 # PassSafe 
 
-PassSafe is small and secure password manager with a modern design UI. All your passwords safe in one place.
+PassSafe is small and secure password manager with a modern UI design. All your passwords safe in one place.
 
 >This is my first app and it has some things that could be changed for better code.
 
